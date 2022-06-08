@@ -1,9 +1,8 @@
-# playwright_second_tests
+# playwright second tests
 
-Page Objects
-Data Objects
-Parallel Execution
-Multiple Browsers
-Multiple Data Sets
-
-***
+	Page Objects
+	Data Objects
+	Parallel Execution
+	Multiple Browsers
+	Multiple Data Sets
+	***
