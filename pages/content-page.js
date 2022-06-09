@@ -1,11 +1,6 @@
-import type { Page,Locator } from '@playwright/test';
+exports.ContentPage = class ContentPage {
 
-export class ContentPage {
-
-    readonly page: Page;
-    readonly searchLink: Locator;
-
-    constructor(page: Page) {
+    constructor(page) {
         this.page = page;
         this.searchLink = page.locator("//input[@name='q' and @type='text']");
     }

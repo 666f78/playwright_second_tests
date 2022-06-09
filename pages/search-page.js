@@ -1,10 +1,6 @@
-import type { Page,Locator } from '@playwright/test';
+exports.SearchPage = class SearchPage {
 
-export class SearchPage {
-    readonly page: Page;
-    readonly searchLink: Locator;
-
-    constructor(page: Page) {
+    constructor(page) {
         this.page = page;
         this.searchLink = page.locator("//input[@name='q']");
     }
@@ -13,7 +9,7 @@ export class SearchPage {
         await this.page.goto('https://google.com/');   
     }
     
-    async find(search_request: string) {
+    async find(search_request) {
         await this.searchLink.fill(search_request);
         await this.page.keyboard.press('Enter');
         await this.page.waitForSelector('#hdtb')

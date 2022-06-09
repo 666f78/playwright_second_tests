@@ -1,8 +1,8 @@
-import { test, expect } from '@playwright/test';
+const  { test, expect } = require('@playwright/test');
 
-import { testdata } from '../test-data/test-data';
-import { SearchPage } from '../pages/search-page';
-import { ContentPage } from '../pages/content-page';
+const { testdata } = require('../test-data/test-data');
+const { SearchPage } = require('../pages/search-page');
+const { ContentPage } = require('../pages/content-page');
 
 for (let data of testdata.searchRequest) {
     test(`Search '${data}' and validation on content page`, async ({ page }) => {
